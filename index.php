@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+    <head>
+         
+        <meta charset="utf-8">
+        <meta name="google-site-verification" content="Bt0naNgDa9DVr3k8beviYc-UmJWQWTl6Iuk-dpK8Fa8" />
+        <meta name="description" content="are you looking for best hotel in birnin kebbi or Kebbi State, checking in to happiness,Home away from home, where every stay feels like a getaway, Hospitality at its finess, A retreat from the ordinary, Living that luxe life for 48 hours because i deserve pampering, living my best life in hotel luxury, staycation mood:ON. "/>
+        
+        <link rel="icon" href="image/log.png" type="image/png">
+        <title>Kamba Motel Ltd.</title>
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="vendors/linericon/style.css">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.css">
+        <link rel="stylesheet" href="vendors/nice-select/css/nice-select.css">
+        <link rel="stylesheet" href="vendors/owl-carousel/owl.carousel.min.css">
+        <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato:400,700,400italic%7CPoppins:300,400,500,700">
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    <body >
+        <header class="header_area"  >
+            <div class="container" >
+                <nav class="navbar navbar-expand-lg navbar-light" >
+                   
+                    <a class="navbar-brand logo_h" href="index.html"><img src="image/Log.png" alt=""> </a>
+                    <h4 style="color: white;">KAMBA <strong style="color: green;">MOTEL</strong> LTD (ANNEX)</h4>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav menu_nav ml-auto">
+                            <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
+                            <li class="nav-item active"><a class="nav-link " href="comingsoon.php">Our gallary</a></li>
+                            <li class="nav-item active" for="contact"><a class="nav-link" href="comingsoon.php">Contact Us</a></li>
+                        </ul>
+                    </div> 
+                </nav>
+            </div>
+        </header>
+       
+        <section class="banner_area">
+            <div class="booking_table d_flex align-items-center">
+            	<div class="overlay bg-parallax" data-stellar-ratio="0.9" data-stellar-vertical-offset="0" data-background=""></div>
+				<div class="container">
+					<div class="banner_content text-center">
+						<h3 style="color: white;">"There is no hospitality like understanding".</h3>
+						<h2 style="color: white;">Relax Your Mind</h2>
+						<h3 style="color: white;">Customer may forget what you said <br>but they will never forget how you made them feel.</h3>
+						<a href="try.php" class="btn theme_btn button_hover" style="color: white;">Book A Room</a><br><br>
+                        <a href="login.php" class="btn theme_btn button_hover" style="color: white;">Track your process</a>
+					</div>
+				</div>
+            </div>
+            
+        </section>
+       
+        <form action="check.php" method="post">
+            <section class="facilities_area section_gap" >
+                <div class="container">
+                   
+                    <div class="section_title text-center whit">
+                        <h2 class="whit" style="color: white;">Motel Accommodation</h2>
+                        <h3 style="color: white;">We all live in an age that belongs to the young at heart. Life that is becoming extremely fast, </h3>
+                    </div>
+                    <div class="row mb_30">
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="accomodation_item text-center">
+                                <div class="hotel_img">
+                                    <img src="image/facilites_bg.jpg" class="img-fluid" alt="">
+                                    <a href="try.php" class="btn theme_btn button_hover" style="color: white;">Book Now</a>
+                                </div>
+                                <a href="checking.php"><h3 class="sec_h4" style="color: white;"> Standard Double Room</h3></a>
+                                <h4 style="color: white;">&#8358;22,000<small>/Night</small></h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                            <div class="accomodation_item text-center">
+                                <div class="hotel_img">
+                                    <img src="image/j.jpg"  class="img-fluid" alt="">
+                                    <a href="try.php" class="btn theme_btn button_hover" style="color: white;">Book Now</a>
+                                </div>
+                                <a href="try.php"><h3 class="sec_h4" style="color: white;">Luxury Suite Room</h3></a>
+                                <h4 style="color: white;">&#8358;27,000<small>/Night</small></h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-sm-12">
+                            <div class="accomodation_item text-center">
+                                <div class="hotel_img">
+                                    <img src="image/y.jpg"  class="img-fluid" alt="">
+                                    <a href="try.php" class="btn theme_btn button_hover" style="color: white;">Book Now</a>
+                                </div>
+                                <a href="try.php"><h3 class="sec_h4" style="color: white;">Business Suite Room</h3></a>
+                                <h4 style="color: white;">&#8358;35,000<small>/Night</small></h>4
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+        </form>
+       
+      
+        <section class="facilities_area section_gap">
+            <div class="overlay bg-parallax" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
+            </div>
+            <div class="container">
+                <div class="section_title text-center">
+                    <h2 class="title_w">Motel Facilities</h2>
+                    <h3>Who are in extremely love with eco friendly system.</h3>
+                </div>
+                <div class="row mb_30">
+                    <div class="col-lg-12 col-md-6">
+                        <div class="facilities_item">
+                            <h2 class="sec_h4"><i class="lnr lnr-dinner"></i>Restaurant</h2>
+                            <p>Flavor for royalty,Bringing class to cuisine , Foodies welcome here,Something hot,Something testy,You are in good hands with us.</p>
+                        </div>
+                    </div>
+                    
+                   <div class="col-lg-12 col-md-6">
+                        <div class="facilities_item">
+                            <h2 class="sec_h4"><i class="lnr lnr"></i>A Hall for seminar activities</h2>
+                            <p>Usage of the Internet is becoming more common due to rapid advancement of technology and power.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="facilities_area section_gap">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 d_flex align-items-center">
+                        <div class="about_content ">
+                            <h2 class="title title_color" style="color: white;">About Us</h2>
+                            <h3>Welcome to Kamba Motel Ltd, where exceptional expriences await,Our luxurious accommodations,modern amenities, and dedicated staff ensure that every guest enjoys a comfortable and memorable stay .</h3>
+                           
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="img-fluid" src="image/rest.jpg" alt="img">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="facilities_area section_gap">
+            <div class="overlay bg-parallaxa" data-stellar-ratio="0.8" data-stellar-vertical-offset="0" data-background="">  
+            </div>
+            <div class="container">
+                <div class="section_title text-center">
+                    <h2 class="title_w">Our Team</h2>
+                    <p><h3>A phrase used when two or more people have collaborated positively on some project or to some end.it means that effective teamwork achieves much more than any...</h2></p>
+                </div>
+                <div class="row mb_30">
+                    <div class="col-lg-12 ">
+                        <div class="facilities_item">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="accomodation_item text-center">
+                                        <div class="hotel_img">
+                                            <img src="image/image.png"  class="img-fluid" alt="">
+                                        </div>
+                                        <a href="#"><h4 class="sec_h4" style="color: white;">CEO | Hon.Ibrahim Bawa Kamba</h4></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 ">
+                                    <div class="accomodation_item text-center">
+                                        <div class="hotel_img">
+                                            <img src="image/image.png"  class="img-fluid" alt="">
+                                        </div>
+                                        <a href="#"><h4 class="sec_h4" style="color: white;">Manager | Nelson Luka</h4></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="accomodation_item text-center">
+                                        <div class="hotel_img">
+                                            <img src="image/image.png"  class="img-fluid" alt="profile photo">
+                                        </div>
+                                        <a href="#"><h4 class="sec_h4" style="color: white;">Accountant | Alhaji.Muslim Ibrahim Bawa</h4></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="facilities_item">
+                        <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="accomodation_item text-center">
+                                        <div class="hotel_img">
+                                            <img src="image/image.png"  class="img-fluid" alt="">
+                                        </div>
+                                        <a href="#"><h4 class="sec_h4" style="color: white;">Receptionalist | Zayya'u Muhammad</h4></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="accomodation_item text-center">
+                                        <div class="hotel_img">
+                                            <img src="image/image.png"  class="img-fluid" alt="">
+                                        </div>
+                                        <a href="#"><h4 class="sec_h4" style="color: white;">Receptionalist | Uche</h4></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="accomodation_item text-center">
+                                        <div class="hotel_img">
+                                            <img src="image/image.png"  class="img-fluid" alt="">
+                                        </div>
+                                        <a href="#"><h4 class="sec_h4" style="color: white;">Kichen Master | Abdurrazak Falalu.</h4></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-12">
+                        <div class="facilities_item">
+                            <div class="row">
+                                <div class="col-lg-4">
+                                    <div class="accomodation_item text-center">
+                                        <div class="hotel_img">
+                                            <img src="image/image.png"  class="img-fluid" alt="">
+                                        </div>
+                                        <a href="#"><h4 class="sec_h4" style="color: white;">Chief House Keeper | Ibrahim Dan Zaria.</h4></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="accomodation_item text-center">
+                                        <div class="hotel_img">
+                                            <img src="image/image.png"  class="img-fluid" alt="">
+                                        </div>
+                                        <a href="#"><h4 class="sec_h4" style="color: white;">Ass House Keeper | vele</h4></a>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4">
+                                    <div class="accomodation_item text-center">
+                                        <div class="hotel_img">
+                                            <img src="image/image.png"  class="img-fluid" alt="">
+                                        </div>
+                                        <a href="#"><h4 class="sec_h4" style="color: white;">Cheif Security | Abu</h4></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+        <footer class="footer-area section_gap">
+            <div class="container">
+               
+                <div class="border_line"></div>
+                <div class="row footer-bottom d-flex justify-content-between align-items-center">
+                    <p class="col-lg-8 col-sm-12 footer-text m-0">
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This is Made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="#" target="_blank">ITech</a>
+   </p>
+                    
+                </div>
+            </div>
+        </footer>
+        <script src="js/jquery-3.2.1.min.js"></script>
+        <script src="js/popper.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="vendors/owl-carousel/owl.carousel.min.js"></script>
+        <script src="js/jquery.ajaxchimp.min.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="vendors/bootstrap-datepicker/bootstrap-datetimepicker.min.js"></script>
+        <script src="vendors/nice-select/js/jquery.nice-select.js"></script>
+        <script src="js/mail-script.js"></script>
+        <script src="js/stellar.js"></script>
+        <script src="vendors/lightbox/simpleLightbox.min.js"></script>
+        <script src="js/custom.js"></script>
+    </body>
+</html>

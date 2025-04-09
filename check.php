@@ -1,126 +1,79 @@
 <?php
 session_start();
- require("conn/connection.php");
- require("conn/function.php");
- 
- $pdo = prepareConnection();
+require("conn/connection.php");
+require("conn/function.php");
 
- $adult=$_POST['adult'];
- $child=$_POST['child'];
- $gender=$_POST['gender'];
- $sroom=$_POST['sroom'];
- $_SESSION['adult'] =$_POST['adult'];
- $_SESSION['child'] =$_POST['child'];
- $_SESSION['gender'] =$_POST['gender'];
- $_SESSION['sroom'] =$_POST['sroom'];
-//  var_dump($adult);
-//  var_dump($child);
-//  var_dump($gender);
-//   var_dump($sroom);
+$pdo = prepareConnection();
 
-//  die();
-if($gender==""){
-  echo '<script>alert("gender must not be left empty!");
-  window.location.href="checking.php";
-  </script>';
-}else if($adult==""){
-  echo '<script>alert("Age must not be left empty!");
-  window.location.href="checking.php";
-  </script>';
-}else if($child==""){
-  echo '<script>alert("No of children must be selected or choose none!");
-  window.location.href="checking.php";
-  </script>';
-}else if($child=="" || $gender=="" || $sroom=="" || $adult=="" ){
-  echo '<script>alert("All filled must be selected!");
-  window.location.href="checking.php";
-  </script>';
-}else if($adult=="younger" || $adult=="young"){
-   echo '<script>alert("You are too young to book a room!");
-   window.location.href="checking.php";
-   </script>';
-}else if($gender=="female"){
-  echo '<script>alert("Only male are allowed!");
-  window.location.href="checking.php";
-  </script>';
-}else if ($adult=="adult" && $child<=2 && $gender=="male"){
-try{
-if($sroom=='standard'){
-  $sql="select rooms.room_type,payment.pstatus from rooms join payment where room_type='standard' and pstatus='paid';";
-  $stmt =$pdo->prepare($sql);
-  $stmt->execute();
-  $rows =$stmt->fetchAll(PDO::FETCH_ASSOC);
-  $roomexit  = $stmt->rowCount();
-  // var_dump($roomexit);
-  // die();
-      if($roomexit==100){
-        echo '<script> 
-          alert ("Booking failed. Standard rooms are unavailable try other rooms!");
-            window.location.href="index.php";
-          </script>';
-      }else{
-        
+$adult = $_POST['adult'];
+$child = $_POST['child'];
+$gender = $_POST['gender'];
+$sroom = $_POST['sroom'];
+
+$_SESSION['adult'] = $adult;
+$_SESSION['child'] = $child;
+$_SESSION['gender'] = $gender;
+$_SESSION['sroom'] = $sroom;
+
+try {
+    // Validate input fields
+    if (empty($gender)) {
+        throw new Exception("Gender must not be left empty!");
+    }
+    if (empty($adult)) {
+        throw new Exception("Age must not be left empty!");
+    }
+    if (empty($child)) {
+        throw new Exception("Number of children must be selected or choose none!");
+    }
+    if (empty($sroom)) {
+        throw new Exception("Room type must be selected!");
+    }
+    if ($adult == "younger" || $adult == "young") {
+        throw new Exception("You are too young to book a room!");
+    }
+    if ($gender == "female") {
+        throw new Exception("Only males are allowed!");
+    }
+
+    // Process booking
+    if ($adult == "adult" && $child <= 2 && $gender == "male") {
+        if ($sroom == 'standard') {
+            $sql = "SELECT rooms.room_type, payment.pstatus FROM rooms JOIN payment WHERE room_type='standard' AND pstatus='paid';";
+        } elseif ($sroom == 'luxury') {
+            $sql = "SELECT rooms.room_type, payment.pstatus FROM rooms JOIN payment WHERE room_type='luxury' AND pstatus='paid';";
+        } elseif ($sroom == 'business') {
+            $sql = "SELECT rooms.room_type, payment.pstatus FROM rooms JOIN payment WHERE room_type='business' AND pstatus='paid';";
+        } else {
+            throw new Exception("Invalid room type selected!");
+        }
+
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute();
+        $roomexit = $stmt->rowCount();
+
+        // Check room availability
+        if (($sroom == 'standard' && $roomexit == 100) ||
+            ($sroom == 'luxury' && $roomexit == 32) ||
+            ($sroom == 'business' && $roomexit >= 6)) {
+            throw new Exception("Booking failed. Selected room type is unavailable, try other rooms!");
+        }
+
+        // Generate success response
+        $hashcode = uniqid(); // Generate a unique hash code
         $mgs = 'success';
-        $mgsid = hash('sha512',$hashcode);
-        header("Location:buyform.php?status=".$mgs."&&cid=".$mgsid);
-      }
-
-}elseif($sroom=='luxury'){
-  $sql="select rooms.room_type,payment.pstatus from rooms join payment where room_type='luxury' and pstatus='paid';";
-  $stmt =$pdo->prepare($sql);
-  $stmt->execute();
-  $rows =$stmt->fetchAll(PDO::FETCH_ASSOC);
-  $roomexit  = $stmt->rowCount();
-      if($roomexit==32){
-        echo '<script> 
-          alert ("Booking failed. Luxury rooms are unavailable try other rooms!");
-            window.location.href="index.php";
-          </script>';
-      }else{
-        
-        $mgs = 'success';
-        $mgsid = hash('sha512',$hashcode);
-        header("Location:buyform.php?status=".$mgs."&&cid=".$mgsid);
-      }
-}elseif($sroom=='business'){
-  $sql="select rooms.room_type,payment.pstatus from rooms join payment where room_type='business' and pstatus='paid';";
-  $stmt =$pdo->prepare($sql);
-  $stmt->execute();
-  $rows =$stmt->fetchAll(PDO::FETCH_ASSOC);
-  $roomexit  = $stmt->rowCount();
-      if($roomexit>=6){
-        echo '<script> 
-        alert ("Booking failed. Business Suite rooms are unavailable try other rooms!");
-            window.location.href="index.php";
-            </script>';
-      }else{
-        $mgs = 'success';
-        $mgsid = hash('sha512',$hashcode);
-        header("Location:buyform.php?status=".$mgs."&&cid=".$mgsid);
-
-      }
-
-}else{
-
-  echo '<script>alert("something else occur try again!");
-    window.location.href="checking.php";
-  </script>';
+        $mgsid = hash('sha512', $hashcode);
+        header("Location:buyform.php?status=" . $mgs . "&&cid=" . $mgsid);
+        exit;
+    } else {
+        throw new Exception("Invalid booking criteria!");
+    }
+} catch (Exception $e) {
+    // Handle errors and redirect with an alert
+    echo '<script>
+        alert("' . $e->getMessage() . '");
+        window.location.href="checking.php";
+    </script>';
+    exit;
 }
-     
-
-}catch(Exception $e){
-
-  echo '<script>alert("something else occur try again!");
-    window.location.href="index.php";
-  </script>';
-}
-}else{
-
-  echo '<script>alert("something else occur try again!");
-    window.location.href="checking.php";
-  </script>';
-}
-
-
-
 ?>
